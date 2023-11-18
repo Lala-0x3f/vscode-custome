@@ -1,0 +1,26 @@
+:root {
+    --italic-font-size: 1.05em
+}
+
+.type.storage,.type.storage.declaration, .storage.class.modifier, .mtki {
+    font-family: 'Victor Mono';
+    font-size: var(--italic-font-size)
+  }
+  
+  .type.storage.arrow.function {
+    font-family: 'JetBrains Mono', '.PingFang SC0', 'Segoe UI Emoji'
+  }
+  
+  .decorator.name, .decorator.punctuation:not(.block), .import.keyword {
+      font-family: 'Victor Mono';
+      font-size: var(--italic-font-size)
+  }
+  .attribute-name {
+      font-family: 'Victor Mono';
+      font-size: var(--italic-font-size)
+  }
+  
+  .comment:not(.punctuation) {
+      font-family: 'Victor Mono';
+      font-size: var(--italic-font-size)
+  }
