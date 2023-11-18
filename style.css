@@ -1,10 +1,12 @@
 :root {
-    --italic-font-size: 1.05em
+    --italic-font-size: 1.05em;
+    --italic-font-weight: 500;
 }
 
 .type.storage,.type.storage.declaration, .storage.class.modifier, .mtki {
     font-family: 'Victor Mono';
-    font-size: var(--italic-font-size)
+    font-size: var(--italic-font-size);
+    font-weight: var(--italic-font-weight)
   }
   
   .type.storage.arrow.function {
@@ -13,14 +15,17 @@
   
   .decorator.name, .decorator.punctuation:not(.block), .import.keyword {
       font-family: 'Victor Mono';
-      font-size: var(--italic-font-size)
+      font-size: var(--italic-font-size);
+      font-weight: var(--italic-font-weight)
   }
   .attribute-name {
       font-family: 'Victor Mono';
-      font-size: var(--italic-font-size)
+      font-size: var(--italic-font-size);
+      font-weight: var(--italic-font-weight)
   }
   
   .comment:not(.punctuation) {
       font-family: 'Victor Mono';
-      font-size: var(--italic-font-size)
+      font-size: var(--italic-font-size);
+      font-weight: var(--italic-font-weight)
   }
