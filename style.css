@@ -1,31 +1,62 @@
 :root {
     --italic-font-size: 1.05em;
-    --italic-font-weight: 500;
+    --italic-font-weight: 600;
 }
 
-.type.storage,.type.storage.declaration, .storage.class.modifier, .mtki {
+.type.storage,
+.type.storage.declaration,
+.storage.class.modifier,
+.mtki {
+    font-family: 'Victor Mono';
+    font-size: var(--italic-font-size);
+    font-weight: var(--italic-font-weight);
+    /* text-shadow: #48d2ef6e 0.5 -0.5 2px, #61f58b5c 0.5 0.5 2px, rgba(230, 123, 99, 0.62) -0.5 0px 3px; */
+}
+
+.type.storage.arrow.function {
+    font-family: 'JetBrains Mono', '.PingFang SC0', 'Segoe UI Emoji'
+}
+
+.decorator.name,
+.decorator.punctuation:not(.block),
+.import.keyword {
+    font-family: 'Victor Mono';
+    font-size: var(--italic-font-size);
+    font-weight: var(--italic-font-weight);
+}
+
+.attribute-name {
     font-family: 'Victor Mono';
     font-size: var(--italic-font-size);
     font-weight: var(--italic-font-weight)
-  }
-  
-  .type.storage.arrow.function {
-    font-family: 'JetBrains Mono', '.PingFang SC0', 'Segoe UI Emoji'
-  }
-  
-  .decorator.name, .decorator.punctuation:not(.block), .import.keyword {
-      font-family: 'Victor Mono';
-      font-size: var(--italic-font-size);
-      font-weight: var(--italic-font-weight)
-  }
-  .attribute-name {
-      font-family: 'Victor Mono';
-      font-size: var(--italic-font-size);
-      font-weight: var(--italic-font-weight)
-  }
-  
-  .comment:not(.punctuation) {
-      font-family: 'Victor Mono';
-      font-size: var(--italic-font-size);
-      font-weight: var(--italic-font-weight)
-  }
+}
+
+.comment:not(.punctuation) {
+    font-family: 'Victor Mono';
+    font-size: var(--italic-font-size);
+    font-weight: var(--italic-font-weight)
+}
+
+.mtk8:hover,
+.mtk9:hover,
+.mtk3:hover,
+.mtk6:hover,
+.mtk7:hover,
+.mtk10:hover {
+    text-shadow: 2 2 15px;
+    transform: scale(1.2);
+}
+
+
+.monaco-editor .cursor {
+    box-shadow: rgba(255, 255, 255, 0.839) 0px 0px 4px;
+    animation: cursor .5s infinite linear;
+}
+
+
+.monaco-editor span[class~="bracket-highlighting-"] {
+    font-family: 'zpix';
+    padding-left: 0.1em;
+    text-shadow: rgba(255, 255, 255, 0.839) 0px 0px 8px;
+    font-size: 1.2em;
+}
