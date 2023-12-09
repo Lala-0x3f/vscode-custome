@@ -1,46 +1,72 @@
 :root {
-    --italic-font-size: 1.05em;
-    --italic-font-weight: 600;
+  --italic-font-size: 1.05em;
+  --italic-font-weight: 600;
 }
 
 @font-face {
-    font-family: 'Victor Mono';
-    src: 'Victor Mono';
-    font-style: italic;
+  font-family: 'Victor Mono';
+  src: 'Victor Mono';
+  font-style: italic;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background: linear-gradient(to right, #fc28a8, #03edf9,#fc28a8);
+  }
+
+  33% {
+    background: linear-gradient(to right, red, green,orange);
+  }
+
+  66% {
+    background: linear-gradient(to right, #f5c1e0, #d803f9,#f8fc28);
+  }
+
+  100% {
+    background: linear-gradient(to right, #fc28a8, #03edf9,#fc28a8);
+  }
+}
+
+footer {
+  animation: gradientAnimation 5s linear infinite;
+  /* 5秒完成一次动画，线性变化，无限循环 */
+
 }
 
 .type.storage,
 .type.storage.declaration,
 .storage.class.modifier,
 .mtki {
-    font-family: 'Victor Mono';
-    font-size: var(--italic-font-size);
-    font-weight: var(--italic-font-weight);
-    /* text-shadow: #48d2ef6e 0.5 -0.5 2px, #61f58b5c 0.5 0.5 2px, rgba(230, 123, 99, 0.62) -0.5 0px 3px; */
+  font-family: 'Victor Mono';
+  font-size: var(--italic-font-size);
+  font-weight: var(--italic-font-weight);
+  /* text-shadow: #48d2ef6e 0.5 -0.5 2px, #61f58b5c 0.5 0.5 2px, rgba(230, 123, 99, 0.62) -0.5 0px 3px; */
 }
 
 .type.storage.arrow.function {
-    font-family: 'JetBrains Mono', '.PingFang SC0', 'Segoe UI Emoji'
+  font-family: 'JetBrains Mono', '.PingFang SC0', 'Segoe UI Emoji'
 }
 
 .decorator.name,
 .decorator.punctuation:not(.block),
 .import.keyword {
-    font-family: 'Victor Mono';
-    font-size: var(--italic-font-size);
-    font-weight: var(--italic-font-weight);
+  font-style: italic;
+  font-family: 'Victor Mono';
+  font-size: var(--italic-font-size);
+  font-weight: var(--italic-font-weight);
 }
 
 .attribute-name {
-    font-family: 'Victor Mono';
-    font-size: var(--italic-font-size);
-    font-weight: var(--italic-font-weight)
+  font-style: italic;
+  font-family: 'Victor Mono';
+  font-size: var(--italic-font-size);
+  font-weight: var(--italic-font-weight)
 }
 
 .comment:not(.punctuation) {
-    font-family: 'Victor Mono';
-    font-size: var(--italic-font-size);
-    font-weight: var(--italic-font-weight)
+  font-family: 'Victor Mono';
+  font-size: var(--italic-font-size);
+  font-weight: var(--italic-font-weight)
 }
 
 
@@ -50,159 +76,170 @@
 .mtk6:hover,
 .mtk7:hover,
 .mtk10:hover {
-    text-shadow: 2 2 15px;
-    transform: scale(1.2);
+  text-shadow: 2 2 15px;
+  transform: scale(1.2);
 }
 
 
 
 .monaco-editor .cursor {
-    background-color: white !important;
-    color: black !important;
-    box-shadow: rgba(255, 255, 255, 0.9s) 0px 0px 10px;
-    animation: cursor .5s infinite linear;
+  /* background-color: white !important;
+    color: black !important; */
+  box-shadow: rgba(255, 255, 255, 0.9s) 0px 0px 10px;
+  animation: cursor .5s infinite linear;
 }
 
 
 .monaco-editor *[class~="bracket-highlighting-"] {
-    font-family: 'zpix';
-    padding-left: 0.1em;
-    text-shadow: rgba(255, 255, 255, 0.839) 0px 0px 8px;
-    font-size: 1.2em;
+  padding-left: 0.1em;
+  text-shadow: rgba(255, 255, 255, 0.839) 0px 0px 8px;
+  font-size: 1.2em;
+}
+
+span.colorpicker-color-decoration {
+  border-radius: 0.25em;
+  transition: all 200ms cubic-bezier(0.1, 1, 0.7, 1.2);
+
+  &:hover {
+    scale: 120%;
+  }
 }
 
 
 .mtk3 {
-    color: #f92aad;
-    text-shadow: 0 0 2px rgb(255, 224, 247), 0 0 5px #dc078e33, 0 0 10px #fff3;
-  }
-  
-  .mtk4 {
-    color: #6d77b3;
-  }
-  
-  .mtk5 {
-    color: #f97e72;
-  }
-  
+  color: #f92aad;
+  text-shadow: 0 0 2px rgb(255, 224, 247), 0 0 5px #dc078e33, 0 0 10px #fff3;
+}
+
+.mtk4 {
+  color: #6d77b3;
+}
+
+.mtk5 {
+  color: #f97e72;
+}
+
+.mtk6 {
+  color: #1a1a1a;
+}
+
+.mtk7 {
+  color: #242223;
+}
+
+.mtk8 {
+  color: #1ead6c;
+  font-style: italic;
+  font-weight: 600;
+  font-family: 'Victor Mono', 'Smiley Sans';
+  font-size: var(--Victor-Mono-size);
+}
+
+.mtk9 {
+  color: rgb(141, 98, 23);
+}
+
+@media (prefers-color-scheme: dark) {
   .mtk6 {
-    color: #1a1a1a;
+    color: #fdfdfd;
+    text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 8px #03edf975;
   }
-  
+
   .mtk7 {
-    color: #242223;
+    color: #fff5f6;
+    text-shadow: 0 0 2px #000, 0 0 10px #fc1f2c75, 0 0 5px #fc1f2c75, 0 0 25px #fc1f2c75;
   }
-  
+
   .mtk8 {
-    color: #1ead6c;
-  
+    color: #72f1b8;
+    text-shadow: 0 0 2px #100c0f, 0 0 10px #257c5575, 0 0 35px #21272475;
     font-family: 'Victor Mono', 'Smiley Sans';
     font-size: var(--Victor-Mono-size);
   }
-  
+
   .mtk9 {
-    color: rgb(141, 98, 23);
+    color: #f4eee4;
+    text-shadow: 0 0 2px #393a33, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
   }
-  
-  @media (prefers-color-scheme: dark) {
-    .mtk6 {
-      color: #fdfdfd;
-      text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 8px #03edf975;
-    }
-    
-    .mtk7 {
-      color: #fff5f6;
-      text-shadow: 0 0 2px #000, 0 0 10px #fc1f2c75, 0 0 5px #fc1f2c75, 0 0 25px #fc1f2c75;
-    }
-    
-    .mtk8 {
-      color: #72f1b8;
-      text-shadow: 0 0 2px #100c0f, 0 0 10px #257c5575, 0 0 35px #21272475;
-      font-family: 'Victor Mono', 'Smiley Sans';
-      font-size: var(--Victor-Mono-size);
-    }
-    
-    .mtk9 {
-      color: #f4eee4;
-      text-shadow: 0 0 2px #393a33, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
-    }
-  }
-  
-  .monaco-editor .margin, .monaco-editor-background, .monaco-editor .inputarea.ime-input {
-    background: transparent;
-  }
-  
-  /* Add the subtle gradient to the editor background */
-  .monaco-editor {
-    background-color: transparent !important;
-    /* background-image: linear-gradient(to bottom, #2a2139 75%, #34294f); */
-    background-size: auto 100vh;
-    background-position: top;
-    background-repeat: no-repeat;
-  }
-  
-  /* Sweet sunset dots */
-  .monaco-workbench .activitybar>.content .monaco-action-bar .badge .badge-content {
-    background: linear-gradient(to bottom, #fff951 25%, #fc28a8);
-  }
-  
-  /* Active tab neon */
-  .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.sizing-fit.active {
-    box-shadow: inset 0 -5px 25px #fc28a825;
-    position: relative;
-    backdrop-filter: blur(50px);
-  }
-  
-  /* Active tab stripe */
-  .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.sizing-fit.active::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(to right, #fc28a8, #03edf9) !important;
-    opacity: 1;
-    z-index: 6;
-  }
-  
-  .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.sizing-fit::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    right: 0;
-    height: 0px;
-    transition: opacity 1s;
-    opacity: 0;
-    z-index: 6;
-  }
-  
-  /* Active sidebar item */
-  .monaco-workbench .activitybar>.content .monaco-action-bar .action-item.checked {
-    /* box-shadow: inset 0 -5px 25px #fc28a825; */
-    position: relative;
-    backdrop-filter: blur(50px);
-  }
-  
-  .monaco-workbench .activitybar>.content .monaco-action-bar .action-item.checked::after {
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    top: 0px;
-    left: 0px;
-    width: 4px;
-    background: linear-gradient(to bottom, #fc28a8, #03edf9) !important;
-    opacity: 1;
-  }
-  
-  .monaco-workbench .activitybar>.content .monaco-action-bar .action-item::after {
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    top: 0px;
-    left: 0px;
-    width: 0px;
-    transition: opacity 1s;
-    opacity: 0;
-  }
+}
+
+.monaco-editor .margin,
+.monaco-editor-background,
+.monaco-editor .inputarea.ime-input {
+  background: transparent;
+}
+
+/* Add the subtle gradient to the editor background */
+.monaco-editor {
+  background-color: transparent !important;
+  /* background-image: linear-gradient(to bottom, #2a2139 75%, #34294f); */
+  background-size: auto 100vh;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+/* Sweet sunset dots */
+.monaco-workbench .activitybar>.content .monaco-action-bar .badge .badge-content {
+  background: linear-gradient(to bottom, #fff951 25%, #fc28a8);
+}
+
+/* Active tab neon */
+.monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.sizing-fit.active {
+  box-shadow: inset 0 -5px 25px #fc28a825;
+  position: relative;
+  backdrop-filter: blur(50px);
+}
+
+/* Active tab stripe */
+.monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.sizing-fit.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #fc28a8, #03edf9) !important;
+  opacity: 1;
+  z-index: 6;
+}
+
+.monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.sizing-fit::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 0px;
+  transition: opacity 1s;
+  opacity: 0;
+  z-index: 6;
+}
+
+/* Active sidebar item */
+.monaco-workbench .activitybar>.content .monaco-action-bar .action-item.checked {
+  /* box-shadow: inset 0 -5px 25px #fc28a825; */
+  position: relative;
+  backdrop-filter: blur(50px);
+}
+
+.monaco-workbench .activitybar>.content .monaco-action-bar .action-item.checked::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  width: 4px;
+  background: linear-gradient(to bottom, #fc28a8, #03edf9) !important;
+  opacity: 1;
+}
+
+.monaco-workbench .activitybar>.content .monaco-action-bar .action-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  transition: opacity 1s;
+  opacity: 0;
+}
