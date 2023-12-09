@@ -3,6 +3,12 @@
     --italic-font-weight: 600;
 }
 
+@font-face {
+    font-family: 'Victor Mono';
+    src: 'Victor Mono';
+    font-style: italic;
+}
+
 .type.storage,
 .type.storage.declaration,
 .storage.class.modifier,
@@ -37,6 +43,7 @@
     font-weight: var(--italic-font-weight)
 }
 
+
 .mtk8:hover,
 .mtk9:hover,
 .mtk3:hover,
@@ -48,13 +55,16 @@
 }
 
 
+
 .monaco-editor .cursor {
-    box-shadow: rgba(255, 255, 255, 0.839) 0px 0px 4px;
+    background-color: white !important;
+    color: black !important;
+    box-shadow: rgba(255, 255, 255, 0.9s) 0px 0px 10px;
     animation: cursor .5s infinite linear;
 }
 
 
-.monaco-editor span[class~="bracket-highlighting-"] {
+.monaco-editor *[class~="bracket-highlighting-"] {
     font-family: 'zpix';
     padding-left: 0.1em;
     text-shadow: rgba(255, 255, 255, 0.839) 0px 0px 8px;
