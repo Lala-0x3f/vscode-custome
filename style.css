@@ -11,26 +11,25 @@
 
 @keyframes gradientAnimation {
   0% {
-    background: linear-gradient(to right, #fc28a8, #03edf9,#fc28a8);
+    background-position: 0% 50%;
   }
-
-  33% {
-    background: linear-gradient(to right, red, green,orange);
-  }
-
-  66% {
-    background: linear-gradient(to right, #f5c1e0, #d803f9,#f8fc28);
-  }
-
+  50% {
+    background-position: 100% 50%;
+  } 
   100% {
-    background: linear-gradient(to right, #fc28a8, #03edf9,#fc28a8);
+    background-position: 0% 50%;
   }
 }
 
 footer {
-  animation: gradientAnimation 5s linear infinite;
-  /* 5秒完成一次动画，线性变化，无限循环 */
+  background: linear-gradient(to right, #fc28a8, #03edf9,#fc28a8, Coral,MediumAquamarine,lime,Turquoise,MediumSlateBlue,cyan);
+  background-size: 400% 100%;
+  animation: gradientAnimation 10s linear infinite;
+  /* 10秒完成一次动画，线性变化，无限循环 */
+}
 
+a.statusbar-item-label {
+  color: DarkSlateGray !important;
 }
 
 .type.storage,
